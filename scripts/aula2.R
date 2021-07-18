@@ -28,4 +28,54 @@ table(BD_20210714$RM, BD_20210714$PART_16) #tabela RM x Partido em 2016
 
 #8. definindo uma nova variável
 
+BD_20210714$VEIC_HAB <- BD_20210714$VEIC_2016 / BD_20210714$POP_2016
+#criando a relação veiculo/habitante
+
+
+#9. calculando estatísticas básicas
+    #argumento opcional na.rm = TRUE para remover os valores faltantes (NA).
+
+mean(BD_20210714$VEIC_HAB, na.rm = TRUE) #calulando a média
+median(BD_20210714$VEIC_HAB, na.rm = TRUE) #calulando a mediana
+var(BD_20210714$VEIC_HAB, na.rm = TRUE) #calulando a variancia
+sd(BD_20210714$VEIC_HAB, na.rm = TRUE) #calulando o desvio padrão
+
+
+#9. desenhando graficos
+
+#box-plot
+boxplot(BD_20210714$VEIC_HAB)
+
+#histograma
+hist(BD_20210714$VEIC_HAB)
+
+#qqplot
+qqnorm(BD_20210714$VEIC_HAB)
+qqline(BD_20210714$VEIC_HAB, col = "red")
+
+
+#10. exportando gráficos
+    #pgn() para selecionar a figura e dev.off() para finalizar o comando 
+
+# box-plot
+png("graficos/boxplot_vec_hab16.png")
+boxplot(BD_20210714$VEIC_HAB)
+dev.off()
+
+#histograma
+png("graficos/hist_vec_hab16.png")
+hist(BD_20210714$VEIC_HAB)
+dev.off()
+
+#qqplot
+png("graficos/qqplot_vec_hab16.png")
+qqnorm(BD_20210714$VEIC_HAB)
+qqline(BD_20210714$VEIC_HAB, col = "red")
+dev.off()
+
+
+#11. exportanto a base de dados
+
+write.csv2 (BD_20210714, "dados/BD_20210718.csv", row.names = FALSE)
+
 
