@@ -1,3 +1,12 @@
+# Aula inicial de de R: 1.abertura/importação dos arquivos, 2. criando novo script, 
+
+
+#3. definindo diretório de trabalho,
+getwd()
+
+#4. importando base de dados
+BD_20210714 <- read.csv2("~/dados/BD_20210714.csv", encoding="UTF-8")
+
 #5. explorando os dados
 
 View(BD_20210714) #função View(), que permite a visualização interativa de uma tabela, existem diversas outras funções que permitem explorar uma base de dados
