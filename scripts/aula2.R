@@ -5,7 +5,7 @@
 getwd()
 
 #4. importando base de dados
-BD_20210714 <- read.csv2("~/dados/BD_20210714.csv", encoding="UTF-8")
+BD_20210714 <- read.csv2("C:/Users/tvzgo/OneDrive/Área de Trabalho/programação/Aulas/MTI/dados/BD_20210714.csv")
 
 #5. explorando os dados
 
