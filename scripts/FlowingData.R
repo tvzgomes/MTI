@@ -1,4 +1,4 @@
-# aula 1 - https://flowingdata.com/visualization-in-r/week-1/r-basics/
+### aula 1 - https://flowingdata.com/visualization-in-r/week-1/r-basics/
 
 x <- 1 + 1
 y <- 100
@@ -84,7 +84,7 @@ library("foreign")
 
 ?summary
 
-#aula 2 - https://flowingdata.com/visualization-in-r/week-1/make-some-charts/
+### aula 2 - https://flowingdata.com/visualization-in-r/week-1/make-some-charts/
 
 
   # 2.1 Started with Charts in R (https://flowingdata.com/2012/12/17/getting-started-with-charts-in-r/)
@@ -115,8 +115,68 @@ education[1,1]      # First cell
 high.order <- order(education$high)         
 education.high <- education[high.order,]
 
+# Sort greatest to least
+high.order <- order(education$high, decreasing=TRUE)
+education.high <- education[high.order,]
 
-  # 2.2 loop
+plot(fakedata)
+
+plot(education)
+
+plot(education.high$high)
+
+plot(education$high, education$bs)
+plot(education[,2:3])
+
+# Passing multiple columns
+plot(education[,2:4])
+
+# Line
+plot(education.high$high, type="l")
+
+# High-density
+plot(education.high$high, type="h")
+
+# Step
+plot(education.high$high, type="s")
+
+# Changing argument values
+plot(education.high$high, las=1)
+
+plot(education.high$high, las=1, xlab="States", ylab="Percent", main="At least high school degree or equivalent by state")
+
+plot(education.high$high, las=1, xlab="States", ylab="Percent", main="At least high school degree or equivalent", bty="n", cex=0.3, cex.axis=0.6, pch=19)  
+
+# Bar plot
+barplot(education$high)
+
+# Bar plot with changed parameters
+barplot(education$high, names.arg=education$state, horiz=TRUE, las=1, cex.names=0.5, border=NA)
+  
+# Single box plot
+boxplot(education$high)
+
+# Multiple box plots for comparison
+boxplot(education[,2:4])
+
+# Multiple charts in one window
+par(mfrow=c(3,3), mar=c(2,5,2,1), las=1, bty="n")
+plot(education.high$high)
+plot(education$high, education$bs)
+plot(education.high$high, type="l") # Line
+plot(education.high$high, type="h") # High-density
+plot(education.high$high, type="s") # Step
+barplot(education$high)
+barplot(education$high, names.arg=education$state, horiz=TRUE, las=1, cex.names=0.5, border=NA)
+boxplot(education$high)
+boxplot(education[,2:4])
+
+  # Make and Use Bar Charts in R (https://flowingdata.com/2015/03/04/how-to-make-and-use-bar-charts-in-r/)
+
+
+
+
+  # 2.3 loop
 x <- c(100, 100, 100, 100, 100)
 
 for (i in 1:length(x)) {
