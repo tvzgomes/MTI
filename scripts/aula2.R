@@ -1,4 +1,8 @@
+###Prática no R! Roteiro 2 - Análise Exploratória I
+#https://luisfelipebr.github.io/mti2020/roteiros/roteiro2.html
+
 # Aula inicial de de R: 1.abertura/importação dos arquivos, 2. criando novo script, 
+
 
 
 #3. definindo diretório de trabalho,

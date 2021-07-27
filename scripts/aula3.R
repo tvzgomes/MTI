@@ -1,3 +1,6 @@
+###Prática no R! Roteiro 3 - Análise Exploratória II
+#https://luisfelipebr.github.io/mti2020/roteiros/roteiro3.html
+
 #2. instalando o tidyverse
 
 install.packages("tidyverse")
