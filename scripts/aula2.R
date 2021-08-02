@@ -3,8 +3,6 @@
 
 # Aula inicial de de R: 1.abertura/importação dos arquivos, 2. criando novo script, 
 
-
-
 #3. definindo diretório de trabalho,
 getwd()
 
