@@ -1,4 +1,4 @@
-###Prática no R! Roteiro 4 - Correlação 
+###Prática no R! Roteiro 5 - Regressão linear
 # https://luisfelipebr.github.io/mti2020/roteiros/roteiro5.html
 
 #1. introdução
